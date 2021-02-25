@@ -1,2 +1,8 @@
 ssh-keygen -c "raja45sekhar"
 useradd git
+grep git /etc/passwd
+passwd git
+su -git
+touch ~/.ssh/authorized_keys
+chmod600 ~/.ssh/authorized_keys
+vi ~/.ssh/authorized_keys
