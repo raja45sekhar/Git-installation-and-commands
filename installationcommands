@@ -6,3 +6,14 @@ su -git
 touch ~/.ssh/authorized_keys
 chmod600 ~/.ssh/authorized_keys
 vi ~/.ssh/authorized_keys
+
+git init --bare myproject
+cd myproject
+git init
+git add .
+git commit -m "intial comment"
+git status
+git log
+git remote v
+git remote add origin
+git push -u orgin
