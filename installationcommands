@@ -1,0 +1,2 @@
+ssh-keygen -c "raja45sekhar"
+useradd git
