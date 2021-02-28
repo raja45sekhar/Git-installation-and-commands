@@ -1,0 +1,41 @@
+Bare project commands
+
+Bare repo won,t  create any .git working directory file and there is no tracking files.
+
+Git init --bare "bare project" 
+
+vagrant@vagrant:~$ git init --bare mybareproject
+Initialized empty Git repository in /home/vagrant/mybareproject/
+vagrant@vagrant:~$ ls -l
+drwxrwxr-x  7 vagrant vagrant  4096 Feb 25 01:09 'bare project'
+vagrant@vagrant:~$ cd mybareproject/
+vagrant@vagrant:~/mybareproject$ ls -l
+total 32
+drwxrwxr-x 2 vagrant vagrant 4096 Feb 28 13:14 branches
+-rw-rw-r-- 1 vagrant vagrant   66 Feb 28 13:14 config
+-rw-rw-r-- 1 vagrant vagrant   73 Feb 28 13:14 description
+-rw-rw-r-- 1 vagrant vagrant   23 Feb 28 13:14 HEAD
+drwxrwxr-x 2 vagrant vagrant 4096 Feb 28 13:14 hooks
+drwxrwxr-x 2 vagrant vagrant 4096 Feb 28 13:14 info
+drwxrwxr-x 4 vagrant vagrant 4096 Feb 28 13:14 objects
+drwxrwxr-x 4 vagrant vagrant 4096 Feb 28 13:14 refs
+
+
+Non Bare project commands
+
+Non Bare repo will create working directory file and .git file will be availble for tracking purpose:
+
+vagrant@vagrant:~$ git init myfristproject
+
+drwxrwxr-x 3 vagrant vagrant 4096 Feb 24 02:32  myfristproject
+
+vagrant@vagrant:~$ cd myfristproject/
+vagrant@vagrant:~/myfristproject$ ls -l
+total 0
+vagrant@vagrant:~/myfristproject$ ls -la
+total 12
+drwxrwxr-x  3 vagrant vagrant 4096 Feb 24 02:32 .
+drwxr-xr-x 13 vagrant vagrant 4096 Feb 28 13:14 ..
+drwxrwxr-x  9 vagrant vagrant 4096 Feb 25 02:07 .git
+vagrant@vagrant:~/myfristproject$
+
